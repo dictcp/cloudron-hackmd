@@ -1,0 +1,28 @@
+{
+  "id": "io.hackmd",
+  "title": "HackMD",
+  "author": "HackMD authors",
+  "description": "file://DESCRIPTION.md",
+  "changelog": "file://CHANGELOG",
+  "tagline": "Best way to write and share your knowledge in markdown",
+  "version": "0.5.2-snapshot",
+  "healthCheckPath": "/status",
+  "httpPort": 3000,
+  "addons": {
+    "localstorage": {},
+    "postgresql": {},
+    "ldap": {}
+  },
+  "manifestVersion": 1,
+  "website": "https://hackmd.io",
+  "contactEmail": "support@cloudron.io",
+  "icon": "logo.png",
+  "tags": [
+    "markdown",
+    "wiki",
+    "document",
+    "collaboration"
+  ],
+  "mediaLinks": [ ]
+}
+
