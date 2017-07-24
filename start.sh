@@ -30,6 +30,7 @@ fi
 # wait for db up
 sleep 3
 
+export NODE_ENV='production'
 export HMD_ALLOW_ANONYMOUS="false"
 export HMD_DB_URL="$POSTGRESQL_URL"
 export HMD_LDAP_URL="$LDAP_URL"
@@ -42,4 +43,4 @@ export HMD_ALLOW_EMAIL_REGISTER=false
 export HMD_IMAGE_UPLOAD_TYPE=filesystem
 
 # run
-NODE_ENV='production' node app.js
+/usr/local/bin/gosu cloudron:cloudron node app.js
