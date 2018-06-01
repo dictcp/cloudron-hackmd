@@ -5,7 +5,7 @@
   "description": "file://DESCRIPTION.md",
   "changelog": "file://CHANGELOG",
   "tagline": "Best way to write and share your knowledge in markdown",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "healthCheckPath": "/status",
   "httpPort": 3000,
   "addons": {

@@ -7,7 +7,7 @@ RUN ln -s /usr/local/node-$NODEJS_VERSION/bin/node /usr/local/bin/node && \
 
 WORKDIR /app/code
 
-ENV HACKMD_VERSION d1d6d5810b12645ddb02275ce0c2498b2189a8a0
+ENV HACKMD_VERSION 1.1.1-ce
 RUN curl -L https://github.com/hackmdio/hackmd/archive/$HACKMD_VERSION.tar.gz | tar -xz --strip-components 1 -f -
 
 # npm, deps
