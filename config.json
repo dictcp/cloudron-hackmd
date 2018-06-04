@@ -1,0 +1,8 @@
+{
+    "production": {
+        "tmpPath": "../../app/data/tmp",
+        "ldap": {
+              "usernameField": "username"
+    }
+    }
+}
