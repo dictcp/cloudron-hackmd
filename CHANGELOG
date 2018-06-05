@@ -1,5 +1,9 @@
+[0.0.4]
+add config file to set tmp directory and ldap username
+Thanks go out to @jeau for the pr!
+
 [0.0.3]
-update to latest upstream release
+update to 1.1.1-ce upstream release
 
 [0.0.2]
 minor bugfix
