@@ -21,9 +21,11 @@ export HMD_LDAP_BINDDN="$LDAP_BIND_DN"
 export HMD_LDAP_BINDCREDENTIALS="$LDAP_BIND_PASSWORD"
 export HMD_LDAP_SEARCHBASE="$LDAP_USERS_BASE_DN"
 export HMD_LDAP_SEARCHFILTER="(username={{username}})"
+export HMD_LDAP_USERNAMEFIELD="username"
+export HMD_IMAGE_UPLOAD_TYPE=filesystem
+# the following two changes could be transferred to config.json to enable users to change this
 export HMD_EMAIL=false
 export HMD_ALLOW_EMAIL_REGISTER=false
-export HMD_IMAGE_UPLOAD_TYPE=filesystem
 
 # run
 /usr/local/bin/gosu cloudron:cloudron node app.js
