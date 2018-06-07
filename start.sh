@@ -26,6 +26,8 @@ export HMD_IMAGE_UPLOAD_TYPE=filesystem
 # the following two changes could be transferred to config.json to enable users to change this
 export HMD_EMAIL=false
 export HMD_ALLOW_EMAIL_REGISTER=false
+# disable pdf export until https://github.com/hackmdio/hackmd/issues/820 is fixed
+export HMD_ALLOW_PDF_EXPORT=false
 
 # run
 /usr/local/bin/gosu cloudron:cloudron node app.js
