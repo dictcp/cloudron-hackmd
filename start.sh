@@ -28,6 +28,8 @@ export HMD_EMAIL=false
 export HMD_ALLOW_EMAIL_REGISTER=false
 # disable pdf export until https://github.com/hackmdio/hackmd/issues/820 is fixed
 export HMD_ALLOW_PDF_EXPORT=false
+# respect users privacy and make notes private by default
+export HMD_DEFAULT_PERMISSION=private
 
 # run
 /usr/local/bin/gosu cloudron:cloudron node app.js

@@ -1,3 +1,6 @@
+[0.0.6]
+switch default visibility to private for new notes
+
 [0.0.5]
 disable pdf export until https://github.com/hackmdio/hackmd/issues/820 is fixed
 
