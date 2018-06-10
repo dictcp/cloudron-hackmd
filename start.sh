@@ -30,6 +30,10 @@ export HMD_ALLOW_EMAIL_REGISTER=false
 export HMD_ALLOW_PDF_EXPORT=false
 # respect users privacy and make notes private by default
 export HMD_DEFAULT_PERMISSION=private
+# let users choose to allow guest editing
+export HMD_ALLOW_ANONYMOUS_EDITS=true
+# create new page, if url does not yet exist
+export HMD_ALLOW_FREEURL=true
 
 # run
 /usr/local/bin/gosu cloudron:cloudron node app.js
