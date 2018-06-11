@@ -20,13 +20,16 @@ RUN npm run build
 RUN npm prune --production
 
 # add utils
-ADD start.sh ./
-RUN chmod +x ./start.sh
-ADD config.json ./
+ADD start.sh /app/code
+RUN chmod +x /app/code/start.sh
 
 # use local storage
-RUN ln -sfn /app/data/build/constant.js ./public/build/constant.js && \
-    rm -rf ./public/uploads && ln -sf /app/data/uploads ./public/uploads
+RUN ln -sfn /app/data/build/constant.js /app/code/public/build/constant.js && \
+    rm -rf /app/code/public/uploads && ln -sf /app/data/uploads /app/code/public/uploads
+
+# add user definable config
+ADD config.json /app/code/config.json-cloudron
+RUN ln -sfn /app/data/config.json /app/code/config.json
 
 EXPOSE 3000
 

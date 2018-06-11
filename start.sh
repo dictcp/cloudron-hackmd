@@ -5,9 +5,12 @@ mkdir -p /app/data/build && \
 mkdir -p /app/data/uploads
 chown -R cloudron:cloudron /app/data
 
-if [ -f .sequelizerc ];
-then
-    node_modules/.bin/sequelize db:migrate
+if [ ! -e /app/data/config.json ]; then
+	cp /app/code/config.json-cloudron /app/data/config.json
+fi
+
+if [ -f .sequelizerc ]; then
+	node_modules/.bin/sequelize db:migrate
 fi
 
 # wait for db up
