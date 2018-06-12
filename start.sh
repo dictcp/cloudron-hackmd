@@ -16,6 +16,14 @@ fi
 # wait for db up
 sleep 3
 
+# generate and store an unique sessionSecret for this installation
+CONFIG_JSON=/app/data/config.json
+if [ $(jq .sessionSecret $CONFIG_JSON) == "null" ]; then
+        echo "generating sessionSecret"
+        sessionsecret=$(pwgen -1sc 32)
+        jq ".sessionSecret = \"$sessionsecret\"" $CONFIG_JSON | sponge $CONFIG_JSON
+fi
+
 export NODE_ENV='production'
 export HMD_ALLOW_ANONYMOUS="false"
 export HMD_DB_URL="$POSTGRESQL_URL"

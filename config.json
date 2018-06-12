@@ -1,5 +1,5 @@
 {
-	"production": {
-		"tmpPath": "/app/data/tmp"
-	}
+  "production": {
+    "tmpPath": "/app/data/tmp"
+  }
 }
