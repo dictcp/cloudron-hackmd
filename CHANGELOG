@@ -1,3 +1,6 @@
+[0.0.8]
+Generate sessionSecret at initial app startup
+
 [0.0.7]
 make it possible to set notes publicly writable
 automatically create new notes if url doesnt exist
