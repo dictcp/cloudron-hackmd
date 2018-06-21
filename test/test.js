@@ -32,10 +32,10 @@ describe('Application life cycle test', function () {
     var chrome = require('selenium-webdriver/chrome');
     var server, browser = new chrome.Driver();
     var username = process.env.USERNAME, password = process.env.PASSWORD;
-    // var email = process.env.EMAIL;
+    var email = process.env.EMAIL;
     var noteUrl;
 
-    function login(done) {
+    function login(username, done) {
         browser.manage().deleteAllCookies().then(function () {
             return browser.get('https://' + app.fqdn);
         }).then(function () {
@@ -140,7 +140,7 @@ describe('Application life cycle test', function () {
         expect(app).to.be.an('object');
     });
 
-    it('can login', login);
+    it('can login', login.bind(null, username));
     it('can create new note', newNote);
     it('can check existing note', checkExistingNote);
     it('can logout', logout);
@@ -155,7 +155,7 @@ describe('Application life cycle test', function () {
         execSync('cloudron restore --app ' + app.id, { cwd: path.resolve(__dirname, '..'), stdio: 'inherit' });
     });
 
-    it('can login', login);
+    it('can login', login.bind(null, username));
     it('can check existing note', checkExistingNote);
     it('can logout', logout);
 
@@ -166,7 +166,7 @@ describe('Application life cycle test', function () {
         done();
     });
 
-    it('can login', login);
+    it('can login', login.bind(null, email));
     it('can check existing note', checkExistingNote);
     it('can logout', logout);
 
@@ -182,7 +182,7 @@ describe('Application life cycle test', function () {
         done();
     });
 
-    it('can login', login);
+    it('can login', login.bind(null, username));
     it('can check existing note', checkExistingNote);
     it('can logout', logout);
 
@@ -200,7 +200,7 @@ describe('Application life cycle test', function () {
         expect(app).to.be.an('object');
     });
 
-    it('can login', login);
+    it('can login', login.bind(null, username));
     it('can create new note', newNote);
     it('can logout', logout);
 
@@ -208,7 +208,7 @@ describe('Application life cycle test', function () {
         execSync('cloudron install --wait --app ' + LOCATION, { cwd: path.resolve(__dirname, '..'), stdio: 'inherit' });
     });
 
-    it('can login', login);
+    it('can login', login.bind(null, email));
     it('can check existing note', checkExistingNote);
     it('can logout', logout);
 

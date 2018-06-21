@@ -26,7 +26,7 @@ export HMD_LDAP_URL="$LDAP_URL"
 export HMD_LDAP_BINDDN="$LDAP_BIND_DN"
 export HMD_LDAP_BINDCREDENTIALS="$LDAP_BIND_PASSWORD"
 export HMD_LDAP_SEARCHBASE="$LDAP_USERS_BASE_DN"
-export HMD_LDAP_SEARCHFILTER="(username={{username}})"
+export HMD_LDAP_SEARCHFILTER="(|(username={{username}})(mail={{username}}))"
 export HMD_LDAP_USERNAMEFIELD="username"
 export HMD_PORT=3000
 export HMD_IMAGE_UPLOAD_TYPE=filesystem
