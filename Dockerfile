@@ -26,7 +26,6 @@ RUN npm prune --production
 
 # add utils
 ADD start.sh /app/code
-RUN chmod +x /app/code/start.sh
 
 # use local storage
 RUN ln -sfn /app/data/build/constant.js /app/code/public/build/constant.js && \
