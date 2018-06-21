@@ -1,5 +1,12 @@
 {
   "production": {
-    "tmpPath": "/tmp/hackmd"
+    "allowAnonymous": false,
+    "allowAnonymousEdits": false,
+    "allowEmailRegister": false,
+    "allowFreeUrl": true,
+    "allowPdfExport": false,
+    "debug": false,
+    "defaultPermission": "private",
+    "email": false
   }
 }
