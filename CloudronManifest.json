@@ -25,6 +25,7 @@
   ],
   "mediaLinks": [
     "https://s3.amazonaws.com/cloudron-app-screenshots/io.hackmd.cloudronapp/f41873c2e6538e0d246d7ad7111a4b4e8df15a5a/screenshot.png"
-  ]
+  ],
+  "documentationUrl": "https://cloudron.io/documentation/apps/hackmd/"
 }
 
