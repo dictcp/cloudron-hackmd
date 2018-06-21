@@ -31,9 +31,8 @@ export HMD_PORT=3000
 export HMD_IMAGE_UPLOAD_TYPE=filesystem
 export HMD_TMP_PATH=/tmp/hackmd
 
-if [ -f .sequelizerc ]; then
-	node_modules/.bin/sequelize db:migrate
-fi
+echo "Running db migrations"
+node_modules/.bin/sequelize db:migrate
 
 chown -R cloudron:cloudron /app/data /tmp/hackmd /run/hackmd
 

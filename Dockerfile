@@ -18,6 +18,9 @@ RUN curl -L https://github.com/hackmdio/hackmd/archive/$HACKMD_VERSION.tar.gz | 
 # npm, deps
 RUN npm install && npm run build
 
+# generate sequelizerrc
+RUN sed -e "s/'change this'/process.env.POSTGRESQL_URL/" /app/code/.sequelizerc.example > /app/code/.sequelizerc
+
 # add utils
 ADD start.sh /app/code
 
