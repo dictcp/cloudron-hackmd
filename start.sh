@@ -20,6 +20,7 @@ fi
 
 # these cannot be changed by user (https://github.com/hackmdio/hackmd/wiki/Environment-Variables)
 export HMD_DOMAIN="$APP_DOMAIN"
+export HMD_PROTOCOL_USESSL=true
 export HMD_DB_URL="$POSTGRESQL_URL"
 export HMD_LDAP_URL="$LDAP_URL"
 export HMD_LDAP_BINDDN="$LDAP_BIND_DN"
