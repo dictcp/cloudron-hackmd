@@ -1,7 +1,9 @@
 #!/bin/bash
 
+set -eu
+
 # prepare data directory
-mkdir -p /app/data/build && \
+mkdir -p /app/data/build
 mkdir -p /app/data/uploads
 chown -R cloudron:cloudron /app/data
 
@@ -12,9 +14,6 @@ fi
 if [ -f .sequelizerc ]; then
 	node_modules/.bin/sequelize db:migrate
 fi
-
-# wait for db up
-sleep 3
 
 # generate and store an unique sessionSecret for this installation
 CONFIG_JSON=/app/data/config.json
@@ -47,4 +46,4 @@ export HMD_ALLOW_ANONYMOUS_EDITS=true
 export HMD_ALLOW_FREEURL=true
 
 # run
-/usr/local/bin/gosu cloudron:cloudron node app.js
+exec /usr/local/bin/gosu cloudron:cloudron node app.js
