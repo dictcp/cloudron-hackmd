@@ -1,5 +1,5 @@
 {
   "production": {
-    "tmpPath": "../../app/data/tmp"
+    "tmpPath": "/tmp/hackmd"
   }
 }
