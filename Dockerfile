@@ -16,13 +16,7 @@ ENV HACKMD_VERSION 1.1.1-ce
 RUN curl -L https://github.com/hackmdio/hackmd/archive/$HACKMD_VERSION.tar.gz | tar -xz --strip-components 1 -f -
 
 # npm, deps
-RUN npm install
-
-# build front-end bundle
-RUN npm run build
-
-# remove dev dependencies
-RUN npm prune --production
+RUN npm install && npm run build
 
 # add utils
 ADD start.sh /app/code
