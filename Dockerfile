@@ -1,14 +1,14 @@
 FROM cloudron/base:0.10.0
 # install jq and moreutils (for sponge).
 # can be removed once https://git.cloudron.io/cloudron/docker-base-image/merge_requests/3 is merged and released
-RUN apt update && apt -y full-upgrade && \
+RUN apt update && \
         apt -y install moreutils jq && \
         rm -rf /var/cache/apt /var/lib/apt/lists
 
 # setup nodejs version
-ENV NODEJS_VERSION 6.9.5
-RUN ln -s /usr/local/node-$NODEJS_VERSION/bin/node /usr/local/bin/node && \
-    ln -s /usr/local/node-$NODEJS_VERSION/bin/npm /usr/local/bin/npm
+RUN mkdir -p /usr/local/node-8.11.3
+RUN curl -L https://nodejs.org/download/release/v8.11.3/node-v8.11.3-linux-x64.tar.gz  | tar zxf - --strip-components 1 -C /usr/local/node-8.11.3
+ENV PATH /usr/local/node-8.11.3/bin:$PATH
 
 WORKDIR /app/code
 
