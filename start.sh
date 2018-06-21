@@ -3,9 +3,8 @@
 set -eu
 
 # prepare data directory
-mkdir -p /app/data/build
-mkdir -p /app/data/uploads
-chown -R cloudron:cloudron /app/data
+mkdir -p /app/data/uploads /run/hackmd
+chown -R cloudron:cloudron /app/data /run/hackmd
 
 if [ ! -e /app/data/config.json ]; then
 	cp /app/code/config.json-cloudron /app/data/config.json

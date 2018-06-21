@@ -21,8 +21,8 @@ RUN npm install && npm run build
 # add utils
 ADD start.sh /app/code
 
-# use local storage
-RUN ln -sfn /app/data/build/constant.js /app/code/public/build/constant.js && \
+# constant.js is generated on startup and "require"d by the code
+RUN ln -sfn /run/hackmd/constant.js /app/code/public/build/constant.js && \
     rm -rf /app/code/public/uploads && ln -sf /app/data/uploads /app/code/public/uploads
 
 # add user definable config
