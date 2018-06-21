@@ -1,25 +1,4 @@
-[0.0.8]
-Generate sessionSecret at initial app startup
+[0.1.0]
+* Initial version
+* Made possible by @dictcp, @felix and @jeau
 
-[0.0.7]
-make it possible to set notes publicly writable
-automatically create new notes if url doesnt exist
-
-[0.0.6]
-switch default visibility to private for new notes
-
-[0.0.5]
-disable pdf export until https://github.com/hackmdio/hackmd/issues/820 is fixed
-
-[0.0.4]
-add config file to set tmp directory and ldap username
-Thanks go out to @jeau for the pr!
-
-[0.0.3]
-update to 1.1.1-ce upstream release
-
-[0.0.2]
-minor bugfix
-
-[0.0.1]
-initial release
