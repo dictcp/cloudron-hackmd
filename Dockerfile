@@ -12,8 +12,8 @@ ENV PATH /usr/local/node-8.11.3/bin:$PATH
 
 WORKDIR /app/code
 
-ENV HACKMD_VERSION 1.1.1-ce
-RUN curl -L https://github.com/hackmdio/hackmd/archive/$HACKMD_VERSION.tar.gz | tar -xz --strip-components 1 -f -
+ENV HACKMD_VERSION 1.2.0
+RUN curl -L https://github.com/hackmdio/codimd/archive/$HACKMD_VERSION.tar.gz | tar -xz --strip-components 1 -f -
 
 # npm, deps
 RUN npm install && npm run build
