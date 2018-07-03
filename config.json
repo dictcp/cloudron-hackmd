@@ -1,7 +1,7 @@
 {
   "production": {
     "allowAnonymous": false,
-    "allowAnonymousEdits": false,
+    "allowAnonymousEdits": true,
     "allowEmailRegister": false,
     "allowFreeUrl": true,
     "allowPdfExport": false,
