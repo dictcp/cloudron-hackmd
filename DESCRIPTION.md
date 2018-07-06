@@ -1,4 +1,4 @@
-This app packages HackMD <upstream>1.1.1-ce</upstream>
+This app packages HackMD <upstream>1.2.0</upstream>
 
 HackMD lets you create realtime collaborative markdown notes on all
 platforms. Inspired by Hackpad, with more focus on speed and flexibility.
