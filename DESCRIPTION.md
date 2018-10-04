@@ -1,6 +1,6 @@
-This app packages HackMD <upstream>1.2.0</upstream>
+This app packages CodiMD <upstream>1.2.1</upstream>
 
-HackMD lets you create realtime collaborative markdown notes on all
+CodiMD lets you create realtime collaborative markdown notes on all
 platforms. Inspired by Hackpad, with more focus on speed and flexibility.
 
 ## Features

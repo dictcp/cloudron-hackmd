@@ -12,7 +12,7 @@ ENV PATH /usr/local/node-8.11.3/bin:$PATH
 
 WORKDIR /app/code
 
-ENV HACKMD_VERSION 1.2.0
+ENV HACKMD_VERSION 1.2.1
 RUN curl -L https://github.com/hackmdio/codimd/archive/$HACKMD_VERSION.tar.gz | tar -xz --strip-components 1 -f -
 
 # npm, deps
