@@ -1,11 +1,11 @@
 {
-  "id": "io.hackmd",
-  "title": "HackMD",
-  "author": "HackMD authors",
+  "id": "io.hackmd.cloudronapp",
+  "title": "CodiMD",
+  "author": "CodiMD authors",
   "description": "file://DESCRIPTION.md",
   "changelog": "file://CHANGELOG",
   "tagline": "Best way to write and share your knowledge in markdown",
-  "version": "0.0.2",
+  "version": "0.3.1",
   "healthCheckPath": "/status",
   "httpPort": 3000,
   "addons": {
@@ -14,15 +14,19 @@
     "ldap": {}
   },
   "manifestVersion": 1,
-  "website": "https://hackmd.io",
+  "website": "https://hackmd-ce.herokuapp.com/",
   "contactEmail": "support@cloudron.io",
   "icon": "logo.png",
   "tags": [
     "markdown",
     "wiki",
     "document",
-    "collaboration"
+    "collaboration",
+    "notes"
   ],
-  "mediaLinks": [ "https://hackmd.io/screenshot.png" ]
+  "mediaLinks": [
+    "https://s3.amazonaws.com/cloudron-app-screenshots/io.hackmd.cloudronapp/f41873c2e6538e0d246d7ad7111a4b4e8df15a5a/screenshot.png"
+  ],
+  "documentationUrl": "https://cloudron.io/documentation/apps/hackmd/"
 }
 

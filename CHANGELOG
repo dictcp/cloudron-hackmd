@@ -1,5 +1,12 @@
-[0.0.2]
-minor bugfix
+[0.1.0]
+* Initial version
+* Made possible by @dictcp, @felix and @jeau
 
-[0.0.1]
-initial release
+[0.2.0]
+* Update screenshot and add documentation link
+
+[0.3.0]
+* HackMD is now called CodiMD
+
+[0.3.1]
+* Update to CodiMD 1.2.1
